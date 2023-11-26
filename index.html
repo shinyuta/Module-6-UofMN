@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Weather Dashboard</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=css-tricks.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <nav>
+        <h1 class="dashboardTitle">Weather Dashboard</h1>
+    </nav>
+
+    <div class="container">
+        <div class="city-search">
+            <h2 class="section-heading">Search for a City:</h2>
+                <p><span class = "error"></span></p>
+                <input type="text" name="city" id="city" placeholder="Please enter a city">
+                <button type='submit' id="submitBtn">Submit</button>
+            <hr>
+            <div class = "cities">
+                <!-- hardcoded buttons -->
+                <li><button class="cityButton1" id="sanDiego">San Diego</button></li>
+                <li><button class="cityButton2" id="seattle">Seattle</button></li>
+                <li><button class="cityButton3" id="sanFransico">san francisco</button></li>
+            </div>
+        </div>
+        
+        <div class="wrapper">
+            <!-- City Current Day Forcast -->
+            <div class="current-weather" id="current-weather">
+                <h2 id="current-city"></h2>
+                <p>Temperature: <span id="temp-current"></span></p>
+                <p>Wind: <span id="wind-current"></span></p>
+                <p>Humidity: <span id="humid-current"></span></p>
+            </div>
+
+            <!-- 5-Day Forecast using dayJS (in javascript) -->
+                <h2>5-Day Forecast</h2>
+                <div class="forecast">
+                <card id="Day1">
+                    <h3 class="date1">Date goes here</h3>
+                    <p>Temperature: <span id="temp-forecast1"></span></p>
+                    <p>Wind: <span id="wind-forecast1"></span></p>
+                    <p>Humidity: <span id="humid-forecast1"></span></p>
+                </card>
+                <card id="Day2">
+                    <h3 class="date2">Date goes here</h3>
+                    <p>Temperature: <span id="temp-forecast2"></span></p>
+                    <p>Wind: <span id="wind-forecast2"></span></p>
+                    <p>Humidity: <span id="humid-forecast2"></span></p>
+                </card>
+                <card id="Day3">
+                    <h3 class="date3">Date goes here</h3>
+                    <p>Temperature: <span id="temp-forecast3"></span></p>
+                    <p>Wind: <span id="wind-forecast3"></span></p>
+                    <p>Humidity: <span id="humid-forecast3"></span></p>
+                </card>
+                <card id="Day4">
+                    <h3 class="date4">Date goes here</h3>
+                    <p>Temperature: <span id="temp-forecast4"></span></p>
+                    <p>Wind: <span id="wind-forecast4"></span></p>
+                    <p>Humidity: <span id="humid-forecast4"></span></p>
+                </card>
+                <card id="Day5">
+                    <h3 class="date5">Date goes here</h3>
+                    <p>Temperature: <span id="temp-forecast5"></span></p>
+                    <p>Wind: <span id="wind-forecast5"></span></p>
+                    <p>Humidity: <span id="humid-forecast5"></span></p>
+                </card>
+                </div>
+        </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+</body>
+</html>
