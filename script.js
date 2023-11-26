@@ -81,7 +81,7 @@ cityBtn3.addEventListener('click', function() {
 
 function currentWeather(city){
     
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${ApiKey}&units=imperial`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${ApiKey}&units=imperial`)
         .then(function (response){
             if (response.ok){
                 errorMessage.textContent = null;
@@ -122,9 +122,9 @@ function currentWeather(city){
             day5Temp.textContent = Math.round(data.list[5].main.temp)+ '°F';
             day5Wind.textContent = Math.round(data.list[5].wind.speed)+ ' mph';
             day5Humidity.textContent = Math.round(data.list[5].main.humidity)+ ' %';
-            
+
         })
         .catch(function(error){
-            console.log('Error occurred. Meow')
+            console.log('Error occurred.')
         });
 };
